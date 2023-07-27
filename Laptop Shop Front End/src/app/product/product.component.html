@@ -1,0 +1,56 @@
+<body>
+   <style>
+      body{
+          background-image: url("../assets/img4.jpg") ;
+          background-repeat: no-repeat;
+          background-size: cover;
+          height: 1700px;
+          background-position: center;
+  
+      }
+  </style>
+<section class="bg-color">
+  <div class="container">
+     <div class="row">
+        <ng-container *ngFor="let item of productArray">
+            <div class="card col-md-3">
+               <div class="card-main"> 
+                    <div class="discount">{{item.discount}}</div>
+                   <div class="label label-green">Pre-order</div>
+                      <div class="image">
+                           <img src="{{item.image}}" alt="" height="200" width="200">
+                     </div>
+                        <div class="cart-line"></div>
+                           <div class="cart-item">
+                              <ul>
+                                <li><a href=""><i class="fa fa-shopping-basket"></i></a></li>
+                                <li><a href=""><i class="fa fa-heart"></i></a></li>
+                                <li><a href=""><i class="fa fa-search"></i></a></li>
+                               </ul>
+                          </div>
+                        
+                    </div>
+                    <div class="content">
+                        <a href="javascript:void(0);">{{item.title}}</a>
+                       <!-- <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis; max-width: 100ch;">{{item.title}}</h5>-->
+                       <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis; max-width: 100ch;">{{item.description}}</p>
+                        
+                        <div class= "rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                            <p><strong>Price :</strong><span class="money"><i class="fa fa-inr"></i> {{item.price}}</span></p>
+                            <button  type="submit" class="cart_btn" (click)="addtocart(item)">Add to cart</button>
+                    </div>
+              </div>        
+      </ng-container>
+         </div>
+          </div>
+        </section>
+      </body>
+      
+      
+

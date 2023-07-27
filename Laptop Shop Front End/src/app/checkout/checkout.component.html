@@ -1,0 +1,156 @@
+<link rel="stylesheet" href="checkout.component.css">
+
+<body>
+    <style>
+        body{
+            background-image: url("../assets/img2.jpg") ;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 900px;
+            background-position: center;
+    
+        }
+    </style>
+    
+    <div class="container">
+        <form action="" (ngSubmit)="buyNow()">
+        <div class="row">
+        <div class="col">
+            <h3 class="title">CheckOut Page</h3>
+
+            <div class="inputBox">
+                <span>UserId :</span>
+                <input type="text" placeholder="john deo" name="userId" [(ngModel)]="check.userId">
+            </div>
+
+            <div class="inputBox">
+                <span>First name :</span>
+                <input type="text" placeholder="john deo" name="first"  [(ngModel)]="check.first">
+            </div>
+
+            <div class="inputBox">
+                <span>Last name :</span>
+                <input type="text" placeholder="john deo"  name="last" [(ngModel)]="check.last">
+            </div>
+
+            <div class="inputBox">
+                <span>Email :</span>
+                <input type="email" placeholder="example@gmail.com"  name="email" [(ngModel)]="check.email">
+            </div>
+
+            <div class="inputBox">
+                <span>Phone Number :</span>
+                <input type="text" placeholder="1234567890" name="phone"  [(ngModel)]="check.phone">
+            </div>
+
+            <div class="inputBox">
+                <span>Address:</span>
+                <input type="text" placeholder="room - street -locality" name="address"  [(ngModel)]="check.address">
+            </div>
+
+            <div class="inputBox">
+                <span>City/Town :</span>
+                <input type="text" placeholder="city"  name="city" [(ngModel)]="check.city">
+            </div>
+
+            <div class="inputBox">
+                <span>PostalCode:</span>
+                <input type="text" placeholder="411 062"  name="postalcode" [(ngModel)]="check.postalcode">
+            </div>
+
+        </div>
+    </div>
+   
+    <button type="submit" class="btn btn-warning">Buy Now</button>&nbsp;&nbsp;&nbsp;
+    <button routerLink="/payment" class="btn btn-danger" align:right>PayNow</button>
+    </form>
+
+    </div>
+</body>
+
+
+<!--
+<div class="checkout">
+    <h1>Checkout</h1>
+    <div class="row">
+        <div class="col-sm-7 ">
+             <h3>Add shipping address</h3>
+             <form (ngSubmit)="orderNow()" class="ngForm">
+                <label for="exampleFormControlInput1" class="form-label">UserId &nbsp; &nbsp; &nbsp; &nbsp;</label>
+                <input 
+                type="text"
+                class="form-input"
+                name="userId"
+                placeholder="Enter UserId" 
+                [(ngModel)]="check.userId"
+                ><br><br>
+                <label for="exampleFormControlInput1" class="form-label">First Name &nbsp;</label>
+                <input 
+                type="text"
+                class="form-input"
+                name="first"
+                placeholder="Enter first name" required
+                [(ngModel)]="check.first"
+                ><br><br>
+                <label for="exampleFormControlInput1" class="form-label">Last Name &nbsp;</label>
+                <input 
+                type="text"
+                class="form-input"
+                name="last"
+                placeholder="Enter last name"
+                [(ngModel)]="check.last"
+                ><br><br>
+                
+                <label for="exampleFormControlInput1" class="form-label">Email &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <input 
+                type="text"
+                class="form-input"
+                name="email"
+                placeholder="Enter user Email"
+                [(ngModel)]="check.email"
+                ><br><br>
+
+                <label for="exampleFormControlInput1" class="form-label"> Phone  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;</label>
+                <input 
+                type="text"
+                class="form-input"
+                name="phone"
+                placeholder=" +91-"
+                [(ngModel)]="check.phone"
+                ><br><br>
+                <label for="exampleFormControlInput1" class="form-label">City/Town &nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <input 
+                type="text"
+                class="form-input"
+                name="city"
+                placeholder="city/Town"
+                [(ngModel)]="check.city"
+                ><br><br>
+                <label for="exampleFormControlInput1" class="form-label"> Postal Code &nbsp;&nbsp;&nbsp;&nbsp; </label>
+                <input 
+                type="text"
+                class="form-input"
+                name="postalcode"
+                placeholder=" Enter postal code"
+                [(ngModel)]="check.postalcode"
+                ><br><br>
+                <label for="exampleFormControlInput1" class="form-label">Street Address &nbsp;</label>
+                <input 
+                type="text"
+                class="form-input"
+                name="address"
+                placeholder="Enter user address"
+                [(ngModel)]="check.address"
+                ><br><br>
+                <button type="submit" class="btn btn-warning">Order Now</button>
+            
+             </form>
+             
+        </div>
+        <div class="col-sm-5">
+             <h3> Total Amount : 50000</h3>
+             <h4>Payment Method :<b> Pay on Delivery</b></h4>
+        </div>
+    </div>
+</div>
+-->
